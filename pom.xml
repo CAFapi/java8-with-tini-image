@@ -84,7 +84,7 @@
                     <images>
                         <image>
                             <alias>java8-with-tini-image</alias>
-                            <name>cafinternal/java8-with-tini-image:${project.version}</name>
+                            <name>cafinternal/prereleases:java8-with-tini-image-${project.version}</name>
                             <build>
                                 <dockerFileDir>.</dockerFileDir>
                                 <args>
