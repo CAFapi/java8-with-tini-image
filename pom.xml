@@ -33,7 +33,7 @@
     <parent>
         <groupId>com.github.cafapi</groupId>
         <artifactId>caf-common</artifactId>
-        <version>1.11.0-218</version>
+        <version>1.13.0-239</version>
     </parent>
     
     <licenses>
@@ -55,6 +55,10 @@
     <properties>
         <maven.install.skip>true</maven.install.skip>
         <skipNexusStagingDeployMojo>true</skipNexusStagingDeployMojo>
+        
+        <dockerHubOrganization>cafapi</dockerHubOrganization>
+        <dockerCafApiOrg>${dockerImagePrefix}${dockerHubOrganization}${dockerOrgSeperator}</dockerCafApiOrg>
+        <dockerProjectVersion>${dockerVersionSeperator}${project.version}</dockerProjectVersion>
     </properties>
     
     <build>
@@ -84,7 +88,7 @@
                     <images>
                         <image>
                             <alias>java8-with-tini-image</alias>
-                            <name>cafinternal/prereleases:java8-with-tini-image-${project.version}</name>
+                            <name>${dockerCafApiOrg}java8-with-tini-image${dockerProjectVersion}</name>
                             <build>
                                 <dockerFileDir>.</dockerFileDir>
                                 <args>
