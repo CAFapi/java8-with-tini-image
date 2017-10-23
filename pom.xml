@@ -20,29 +20,29 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    
+
     <groupId>com.github.cafapi</groupId>
     <artifactId>java8-with-tini-image</artifactId>
     <version>1.1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    
+
     <name>Java8 with Tini image</name>
     <description>A standard Java8 image with tini incorporated in. To be used as a base image for some CAF projects</description>
     <url>https://github.com/CAFapi/java8-with-tini-image</url>
-    
+
     <parent>
         <groupId>com.github.cafapi</groupId>
         <artifactId>caf-common</artifactId>
         <version>1.13.0-239</version>
     </parent>
-    
+
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>
             <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
         </license>
     </licenses>
-    
+
     <developers>
         <developer>
              <id>arogan92</id>
@@ -50,17 +50,15 @@
             <email>adam.pau.rogan@hpe.com</email>
         </developer>
     </developers>
-    
-    
+
     <properties>
         <maven.install.skip>true</maven.install.skip>
         <skipNexusStagingDeployMojo>true</skipNexusStagingDeployMojo>
-        
         <dockerHubOrganization>cafapi</dockerHubOrganization>
         <dockerCafApiOrg>${dockerImagePrefix}${dockerHubOrganization}${dockerOrgSeperator}</dockerCafApiOrg>
         <dockerProjectVersion>${dockerVersionSeperator}${project.version}</dockerProjectVersion>
     </properties>
-    
+
     <build>
         <plugins>
             <plugin>
@@ -110,7 +108,7 @@
             </plugin>
         </plugins>
     </build>
-    
+
     <scm>
         <connection>scm:git:https://github.com/CAFapi/java8-with-tini-image.git</connection>
         <developerConnection>scm:git:https://github.com/CAFapi/java8-with-tini-image.git</developerConnection>

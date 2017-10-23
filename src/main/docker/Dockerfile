@@ -16,7 +16,6 @@
 
 FROM java:8
 
-
 # Add Tini
 ENV TINI_VERSION v0.14.0
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
